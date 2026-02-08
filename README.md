@@ -22,33 +22,46 @@ https://gamejolt.com/games/atagulide/1041040
 Bu komut sayıları veya değişkenleri belirtmek için kulanılır.
 #### ÖRNEK:
 ##### ata x = 100
+
 ##### ata y = 50
 
 ### eger:
 Bu komut bir koşul doğruysa bir işlemi çalıştırmak için kulanılır.
 #### ÖRNEK:
 ata x = 100
+
 ata y = 50
+
 ata çarpma = x*y
+
 ##### eger çarpma <100:
 
 ### yaz:
 Bu komut ekrana yazı veya değer göstermek için kullanılır.
 #### ÖRNEK:
 ata x = 100
+
 ata y = 50
+
 ata çarpma = x*y
+
 eger çarpma <100:
+
 ##### yaz "100'den küçük"
 
 ### bitir:
 Bu komut programı tamamen durdurmak / sonlandırmak için kulanılır.
 #### ÖRNEK:
 ata x = 100
+
 ata y = 50
+
 ata çarpma = x*y
+
 eger çarpma <100:
+
 yaz "100'den küçük"
+
 ##### bitir
 
 ### Bunları bilmeniz yeterlidir.
@@ -56,21 +69,34 @@ yaz "100'den küçük"
 # ATAGUL IDE örnek kodlar
 ### 1.ÖRNEK:
 ata x = 100
+
 ata y = 50
+
 ata çarpma = x*y
+
 eger çarpma <100:
+
 yaz "100'den küçük"
+
 bitir
 
 ### 2.ÖRNEK:
 ata x = 100
+
 ata y = 50
+
 ata çarpma = x*y
+
 eger çarpma <100:
+
 yaz "100'den küçük"
+
 bitir
+
 eger çarpma >100:
+
 yaz "100'den büyük"
+
 bitir
 
 ### ©2026 ATAGUL GAMES
