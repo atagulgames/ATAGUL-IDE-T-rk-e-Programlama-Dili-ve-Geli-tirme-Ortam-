@@ -5,35 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ATAGUL IDE - Türkçe Programlama Dili</title>
 <style>
-    /* Temel stil */
     body, html {
         margin: 0;
         padding: 0;
-        height: 100%;
         font-family: 'Arial', sans-serif;
-        overflow-y: auto; /* Scroll aktif */
-        background: radial-gradient(ellipse at bottom, #0b0c10 0%, #1f2833 100%);
         color: #fff;
+        min-height: 100%;
+        background: radial-gradient(ellipse at bottom, #0b0c10 0%, #1f2833 100%);
+        overflow-y: auto;
         position: relative;
     }
 
-    /* Yıldızlı arka plan efektleri */
-    .star {
-        position: absolute;
-        width: 2px;
-        height: 2px;
-        background: white;
-        border-radius: 50%;
-        opacity: 0.8;
-        animation: twinkle linear infinite;
-    }
-
-    @keyframes twinkle {
-        0%, 100% { opacity: 0.2; }
-        50% { opacity: 1; }
-    }
-
-    /* Konteyner */
+    /* Container */
     .container {
         position: relative;
         z-index: 10;
@@ -82,7 +65,7 @@
     .emoji {
         position: absolute;
         font-size: 2.5rem;
-        pointer-events: none; /* Fareyi engelleme */
+        pointer-events: none;
         animation: floatEmoji linear infinite;
         text-shadow: 0 0 10px #fff;
     }
@@ -90,6 +73,22 @@
     @keyframes floatEmoji {
         0% { transform: translateY(100vh) translateX(0) rotate(0deg); opacity: 1;}
         100% { transform: translateY(-10vh) translateX(50vw) rotate(360deg); opacity: 0;}
+    }
+
+    /* Yıldızlar */
+    .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: white;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: twinkle linear infinite;
+    }
+
+    @keyframes twinkle {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 1; }
     }
 </style>
 </head>
@@ -106,11 +105,11 @@
 
 <!-- Yıldızları rastgele oluştur -->
 <script>
-    const starCount = 100;
+    const starCount = 200; // daha fazla yıldız
     for(let i=0;i<starCount;i++){
         let star = document.createElement('div');
         star.className = 'star';
-        star.style.top = Math.random() * window.innerHeight + 'px';
+        star.style.top = Math.random() * document.body.scrollHeight + 'px';
         star.style.left = Math.random() * window.innerWidth + 'px';
         star.style.width = star.style.height = Math.random()*2 + 1 + 'px';
         star.style.animationDuration = 1 + Math.random()*3 + 's';
